@@ -6,7 +6,7 @@ type ProductCardProps = {
 
 function ProductCard({ product }: ProductCardProps) {
   return (
-    <div>
+    <div style={{textAlign: "left"}}>
         <img
             src={product.images[0]}
             alt={product.name}

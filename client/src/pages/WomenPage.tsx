@@ -4,8 +4,6 @@ import { products } from "../data/products";
 function WomenPage() {
   return (
     <>
-      <h1>Women</h1>
-
       <ProductGrid products={products} />
     </>
   );
