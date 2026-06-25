@@ -9,8 +9,8 @@ function NavBar() {
         justifyContent: "space-between",
         background: "black",
         height: "4rem",
-        padding: "5px 80px"
-        // padding: "0 20px",
+        padding: "5px 80px",
+        margin: "0"
       }}
     >
       <div style={{display: "flex", justifyContent: "space-between", gap: "30px"}}>
@@ -35,7 +35,7 @@ function NavBar() {
             style={{ height: "23px" }}
           />
         </Link>
-        <Link to="/profile">
+        <Link to="/user">
           <img
             src="/images/User.png"
             alt="User"

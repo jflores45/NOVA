@@ -1,14 +1,14 @@
 import type { Product } from "../types/Product";
 
-export const products: Product[] = [
+export const mainProduct: Product[] = [
   {
-    id: "6",
+    id: "1",
     name: "Cassie Cashmere Sweater",
     price: 150,
     category: "women",
     type: "sweaters",
     description: "100% cashmere sweater",
-    images: ["/images/Cassie_Sweater.png"],
+    images: ["/images/red_trackSuit.png"],
     colors: ["butter yellow"],
     sizes: ["s", "m", "l", "xl"],
 
@@ -17,13 +17,13 @@ export const products: Product[] = [
   },
 
   {
-    id: "7",
+    id: "2",
     name: "Cassie Kitten Heels",
     price: 150,
     category: "women",
     type: "heels",
     description: "Kitten Heels",
-    images: ["/images/Cassie_Kitten_Heel.png"],
+    images: ["/images/Maddy.png"],
     colors: ["butter yellow"],
     sizes: ["s", "m", "l", "xl"],
 
@@ -32,13 +32,13 @@ export const products: Product[] = [
   },
 
   {
-    id: "8",
+    id: "3",
     name: "Cassie Cotton Wrap Top",
     price: 150,
     category: "women",
     type: "top",
     description: "Cotton Wrap Top",
-    images: ["/images/Cassie_Wrap_Top.png"],
+    images: ["/images/Grey_Suit.png"],
     colors: ["butter yellow"],
     sizes: ["s", "m", "l", "xl"],
 
@@ -47,18 +47,19 @@ export const products: Product[] = [
   },
 
   {
-    id: "9",
+    id: "4",
     name: "Cassie Daisy Socks",
     price: 15,
     category: "women",
     type: "socks",
     description: "100% cashmere sweater",
-    images: ["/images/Cassie_Socks.png"],
+    images: ["/images/Green_Corset.png"],
     colors: ["butter yellow"],
     sizes: ["s", "m", "l", "xl"],
 
     featured: true,
     trendTags: ["in-season", "quiet-luxury"]
-  }
+  },
+
 
 ];

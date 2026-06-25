@@ -37,6 +37,7 @@ function Footer() {
             <p>Privacy Policy</p>
             <p>Cookie Policy</p>
             <p>Terms & Conditions</p>
+            <p>Accessibility</p>
           </section>
   
           <section>
@@ -63,7 +64,7 @@ function Footer() {
             alignItems: "center",
           }}
         >
-          <p>© Nova 2026. All Rights Reserved.</p>
+          <p>© Nova 2026. All Rights Reserved</p>
   
           <div>
             <img style={{transform: "translateY(-6px)"}} src="/images/Instagram.png" alt="User"/>

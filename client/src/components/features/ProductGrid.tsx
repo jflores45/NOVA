@@ -7,11 +7,20 @@ type ProductGridProps = {
 
 function ProductGrid({ products }: ProductGridProps) {
   return (
-    
-    <div style={{display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px", padding: "100px 50px"}}>
-      {products.map((p) => (
-        <ProductCard  product={p}/>
-      ))}
+    <div
+        style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "20px",
+            padding: "100px 50px"
+          }}
+        >
+        {products.map((p) => (
+          <ProductCard  
+            key={p.id}
+            product={p}
+          />
+        ))}
     </div>
   );
 }
