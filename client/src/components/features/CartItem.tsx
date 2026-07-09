@@ -2,7 +2,7 @@ type CartItemProps = {
     cart: Cart;
     onIncrease: () => void;
     onDecrease: () => void;
-  };
+};
 function CartItem({cart, onDecrease, onIncrease} : CartItemProps){
     return (
         <div>

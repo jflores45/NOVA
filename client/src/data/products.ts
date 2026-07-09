@@ -10,10 +10,7 @@ export const products: Product[] = [
     description: "100% cashmere sweater",
     images: ["/images/Cassie_Sweater.png"],
     colors: ["butter yellow"],
-    sizes: ["s", "m", "l", "xl"],
-
-    featured: true,
-     trendTags: ["in-season", "quiet-luxury"]
+    sizes: ["s", "m", "l", "xl"]
   },
 
   {
@@ -25,10 +22,7 @@ export const products: Product[] = [
     description: "Kitten Heels",
     images: ["/images/Cassie_Kitten_Heel.png"],
     colors: ["butter yellow"],
-    sizes: ["s", "m", "l", "xl"],
-
-    featured: true,
-     trendTags: ["in-season", "quiet-luxury"]
+    sizes: ["s", "m", "l", "xl"]
   },
 
   {
@@ -40,10 +34,7 @@ export const products: Product[] = [
     description: "Cotton Wrap Top",
     images: ["/images/Cassie_Wrap_Top.png"],
     colors: ["butter yellow"],
-    sizes: ["s", "m", "l", "xl"],
-
-    featured: true,
-     trendTags: ["in-season", "quiet-luxury"]
+    sizes: ["s", "m", "l", "xl"]
   },
 
   {
@@ -55,10 +46,7 @@ export const products: Product[] = [
     description: "100% cashmere sweater",
     images: ["/images/Cassie_Socks.png"],
     colors: ["butter yellow"],
-    sizes: ["s", "m", "l", "xl"],
-
-    featured: true,
-    trendTags: ["in-season", "quiet-luxury"]
+    sizes: ["s", "m", "l", "xl"]
   }
 
 ];

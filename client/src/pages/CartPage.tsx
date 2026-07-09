@@ -2,7 +2,7 @@
 import CartGrid from "../components/features/CartGrid";
 import ProductGrid from "../components/features/ProductGrid";
 import { initialCarts } from "../data/cart";
-import { products } from "../data/products";
+// import { products } from "../data/products";
 import { useState } from "react";
 
 function CartPage() {
@@ -37,8 +37,8 @@ function CartPage() {
             carts={carts}
             onIncrease={increaseQuantity}
             onDecrease={decreaseQuantity}
-           />
-        <ProductGrid products={products}/>
+          />
+        <ProductGrid/>
         {/* <Total/> */}
         
       </>

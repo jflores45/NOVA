@@ -12,17 +12,32 @@ function ProductCard({ product }: ProductCardProps) {
       style={{ textDecoration: "none", color: "inherit" }}
     >
       <div style={{ textAlign: "left", height: "400px" }}>
-        <img
-          src={product.images[0]}
-          alt={product.name}
-          width="300"
-          height="400"
-          style={{
-            objectFit: "contain",
-          }}
-        />
+        <div style={{ position: "relative" }}>
+          <img
+            src={product.images[0]}
+            alt={product.name}
+            width="300"
+            height="400"
+            style={{
+              objectFit: "cover",
+            }}
+          />
 
-        <button>+</button>
+          <button
+            style={{
+              position: "absolute",
+              bottom: "20px",
+              right: "40px",
+              background: "none",
+              borderRadius: "20px",
+              border: "2px solid white",
+              color: "white",
+              display: "flex",
+            }}
+          >
+            +
+          </button>
+        </div>
 
         <h3>{product.name}</h3>
 

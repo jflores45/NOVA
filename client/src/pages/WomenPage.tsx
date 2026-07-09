@@ -1,10 +1,10 @@
 import ProductGrid from "../components/features/ProductGrid";
-import { products } from "../data/products";
+// import { products } from "../data/products";
 
 function WomenPage() {
   return (
     <>
-      <ProductGrid products={products} />
+      <ProductGrid category="women"/>
     </>
   );
 }

@@ -12,8 +12,4 @@ export type Product = {
     colors: string[];
   
     sizes: string[];
-  
-    featured: boolean;
-  
-    trendTags: string[];
   };

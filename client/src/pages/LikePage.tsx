@@ -1,5 +1,13 @@
+
+import { useState } from "react";
+
+
 function LikePage() {
-    return <h1>Likes Bag</h1>;
+    return (
+
+        <>
+        </>
+    );
   }
   
   export default LikePage;

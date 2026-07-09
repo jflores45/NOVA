@@ -14,7 +14,6 @@ function App() {
   return (
     <>
       <NavBar />
-
       <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/women" element={<WomenPage />} />
@@ -23,7 +22,6 @@ function App() {
           <Route path="/user" element={<UserPage />} />
           <Route path="/product/:id" element={<ProductPage />} />
       </Routes>
-
       <Footer />
     </>
   );

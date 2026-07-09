@@ -5,16 +5,18 @@ import ProductGridSmall from "../components/features/ProductGridSmall";
 import TrendCard from "../components/features/TrendCard";
 import BlogCard from "../components/features/BlogCard";
 
-import { mainProduct } from "../data/mainProduct";
+// import { mainProduct } from "../data/mainProduct";
 import { products } from "../data/products";
 
 function MainPage () {
     return (
         <>
              <EditorialCard type="female"/>
-             <ProductGrid products={mainProduct}/>
+             <ProductGrid collection="women editorial"/>
+             
              <EditorialCard type="male"/>
-             <ProductGrid products={mainProduct}/>
+             <ProductGrid collection="men editorial" />
+
              <TrendCard/>
              <ProductGridSmall products={products}/>
              <BlogCard/>
