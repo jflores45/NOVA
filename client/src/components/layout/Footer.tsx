@@ -6,7 +6,7 @@ function Footer() {
         style={{
           background: "black",
           color: "white",
-          padding: "80px 80px 40px 80px",
+          padding: "100px 80px 20px 80px",
           textAlign: "left"
         }}
       >
@@ -56,21 +56,14 @@ function Footer() {
           </section>
         </div>
   
-        <div
-          style={{
-            marginTop: "40px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
+        <div style={{ marginTop: "120px", display: "flex", justifyContent: "space-between", alignItems: "center"}}>
           <p>© Nova 2026. All Rights Reserved</p>
   
-          <div>
-            <img style={{transform: "translateY(-6px)"}} src="/images/Instagram.png" alt="User"/>
-            <img style={{width: "70px", transform: "translateY(5px)"}} src="/images/facebook.png" alt="User"/>
-            <img src="/images/X.png" alt="User"/>
-            <img style={{transform: "translateY(-2px)"}} src="/images/Tiktok.png" alt="User"/>
+          <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+            <img style={{ height: "30px" }} src="/images/Instagram.png" alt="Instagram" />
+            <img style={{ height: "50px" }} src="/images/facebook.png" alt="Facebook" />
+            <img style={{ height: "40px" }} src="/images/X.png" alt="X" />
+            <img style={{ height: "40px" }} src="/images/Tiktok.png" alt="TikTok" />
           </div>
         </div>
       </footer>

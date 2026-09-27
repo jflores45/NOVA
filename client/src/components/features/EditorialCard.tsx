@@ -1,28 +1,24 @@
 
+import CarouselBackground from "./CarouselBackground";
 
-function EditorialCard({type}) {
- 
-    if (type ==="female"){
-        return (
-            <div style={{position: "relative", backgroundImage: "url('/images/editorial-w.png')", height: "92vh", padding: "0px"}}>
-                <div style={{position: "absolute", bottom: "0", left: "0", padding: "60px", width: "40%", color: "white"}}>
-                    <h3>Women Fall 2026</h3>
-                    <p>This season’s looks are filled with vibrant collections of classic elevated basics, accessories, and timeless outwear.</p>
-                    <button style={{background:"none", color:"white", padding: "20px", width: "180px", borderRadius: "5px", border: "2px solid white"}}>Shop Now</button>
-                </div>
-            </div>
-        );
-    } else {
-        return (
-            <div style={{position: "relative", backgroundImage: "url('/images/editorial-m.png')", height: "100vh"}}>
-                <div style={{position: "absolute", bottom: "0", left: "0", padding: "60px", width: "40%", color: "white"}}>
-                    <h3>Men Fall 2026</h3>
-                    <p>This season’s looks are filled with vibrant collections of classic elevated basics, accessories, and timeless outwear.</p>
-                    <button style={{background:"none", color:"white", padding: "20px", width: "180px", borderRadius: "5px", border: "2px solid white"}}>Shop Now</button>
-                </div>
-            </div>
-        );
-    }
-}
-
+function EditorialCard({ type }: { type: "female" | "male" }) {
+    const images =
+      type === "female"
+        ? ["/images/editorial-w1.png", "/images/editorial-w2.png", "/images/editorial-w3.png", "/images/editorial-w4.png"]
+        : ["/images/editorial-m1.png", "/images/editorial-m2.png", "/images/editorial-m3.png", "/images/editorial-m4.png"];
+  
+    const heading = type === "female" ? "Women Fall 2026" : "Men Fall 2026";
+  
+    return (
+      <CarouselBackground images={images}>
+        <div style={{ position: "absolute", bottom: "0", left: "0", padding: "60px", width: "35%", color: "white" }}>
+          <h3 style={{ margin: "0 0 16px 0" }}>{heading}</h3>
+          <p style={{ margin: "0 0 24px 0" }}>
+            This season's looks are filled with vibrant collections of classic elevated basics, accessories, and timeless outwear.
+          </p>
+          <button style={{background: "rgba(255, 255, 255, 0.06)",  backdropFilter: "blur(20px)",  WebkitBackdropFilter: "blur(10px)", color:"white", padding: "18px 32px", width: "36%", borderRadius: "5px", border: "1px solid white", fontSize: "medium"}}>Shop Now</button>
+        </div>
+      </CarouselBackground>
+    );
+  }
 export default EditorialCard;

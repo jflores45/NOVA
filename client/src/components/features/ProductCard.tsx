@@ -29,19 +29,18 @@ function ProductCard({ product }: ProductCardProps) {
               bottom: "20px",
               right: "40px",
               background: "none",
-              borderRadius: "20px",
-              border: "2px solid white",
-              color: "white",
-              display: "flex",
-            }}
-          >
-            +
+              border: "none"
+              }}
+            >
+            <img  src="/images/Add.png" alt="Add" style={{ height: "30px" }}/>
           </button>
         </div>
 
-        <h3>{product.name}</h3>
+        <div style={{padding: "0px", textAlign: "left", lineHeight:"0.8"}}>
+          <p>{product.name}</p>
+          <p>${product.price}</p>
+        </div>
 
-        <p>${product.price}</p>
       </div>
     </Link>
   );

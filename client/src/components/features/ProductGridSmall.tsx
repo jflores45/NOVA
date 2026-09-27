@@ -7,23 +7,17 @@ type ProductCardProps = {
 
 function ProductGridSmall({ products }: ProductCardProps) {
     return (
-        <>
+        <div style={{ padding: "20px 50px"}}>
             <h2>Buy the Look</h2>
-            <div style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(4, 1fr)",
-                    gap: "20px",
-                    padding: "100px 50px"
-            }}>
-            {products.map((p) => (
-            <ProductCardSmall 
-                key={p.id}
-                product={p}
-            />
-
-            ))}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px" }}>
+                {products.map((p) => (
+                <ProductCardSmall 
+                    key={p.id}
+                    product={p}
+                />
+                ))}
             </div>
-        </>
+        </div>
     );
 }
 

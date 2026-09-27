@@ -38,14 +38,7 @@ function ProductGrid({ collection, category }: ProductGridProps) {
   if (error) return <p>Something went wrong: {error}</p>;
 
   return (
-    <div
-        style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "20px",
-            padding: "100px 50px"
-          }}
-        >
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px", padding: "50px 40px 100px 40px" }}>
         {products.map((p) => (
           <ProductCard  
             key={p.id}
