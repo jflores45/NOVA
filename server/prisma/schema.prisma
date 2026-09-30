@@ -11,22 +11,98 @@ datasource db {
   provider = "postgresql"
 }
 
-model Product {
-  id          String @id @default(uuid())
-  name        String
-  price       Float
-  category    String
-  type        String
-  description String
-  collection  String
-  
-  featured  Boolean
-  images String[]
-  colors String[]
-  sizes  String[]
+// USER:
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique @db.VarChar(255)
+  name      String?  @db.VarChar(30)
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  cart      Cart?
+  wishlist  WishlistItem[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@map("users")
+}
+
+// CART:
+model Cart {
+  id        Int  @id @default(autoincrement())
+
+  userId    Int  @unique @map("user_id")
+  user      User @relation(fields: [userId], references: [id])
+
+  items     CartItem[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("cart")
+}
+
+// CART ITEM:
+model CartItem {
+  id        Int  @id @default(autoincrement())
+
+  quantity  Int  @default(1)
+
+  cartId    Int  @map("cart_id")
+  cart      Cart @relation(fields: [cartId], references: [id])
+
+  productId Int @map("product_id")
+  product   Product @relation(fields: [productId], references: [id])
+
+  @@map("cart_item")
+}
+
+// WISH LIST ITEM:
+model WishlistItem {
+  id        Int      @id @default(autoincrement())
+
+  userId    Int      @map("user_id")
+  productId Int      @map("product_id")
+
+  user      User     @relation(fields: [userId], references: [id])
+  product   Product  @relation(fields: [productId], references: [id])
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("wish_list")
+}
+
+// PRODUCT IMAGE:
+model ProductImage {
+  id        Int     @id @default(autoincrement())
+  url       String
+
+  sortOrder Int     @map("sort_order")
+
+  productId Int     @map("product_id")
+  product   Product @relation(fields: [productId], references: [id])
+
+  @@map("product_images")
+}
+
+
+// PRODUCT:
+model Product {
+  id          Int     @id @default(autoincrement())
+  name        String  @db.VarChar(100)
+  price       Float   
+  description String 
+
+  collection  String?
+  category    String
+  featured    Boolean @default(false)
+
+  images      ProductImage[]
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  cartItems   CartItem[]
+  wishlistedBy WishlistItem[]
 
   @@map("products")
 }
+
