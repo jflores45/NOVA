@@ -9,8 +9,6 @@ export const products = [
 
     featured: true,
     images: ["/images/Cassie_Sweater.png"],
-    colors: ["butter yellow"],
-    sizes: ["s", "m", "l", "xl"]
 
   },
 
@@ -24,8 +22,6 @@ export const products = [
 
     featured: true,
     images: ["/images/Cassie_Kitten_Heel.png"],
-    colors: ["butter yellow"],
-    sizes: ["s", "m", "l", "xl"]
 
   },
 
@@ -39,8 +35,7 @@ export const products = [
 
     featured: true,
     images: ["/images/Cassie_Wrap_Top.png"],
-    colors: ["butter yellow"],
-    sizes: ["s", "m", "l", "xl"]
+
   },
 
   {
@@ -53,8 +48,7 @@ export const products = [
 
     featured: true,
     images: ["/images/Cassie_Socks.png"],
-    colors: ["butter yellow"],
-    sizes: ["s", "m", "l", "xl"]
+   
   },
   {
     name: "Lola TrackSuit",
@@ -66,8 +60,7 @@ export const products = [
 
     featured: true,
     images: ["/images/red_trackSuit.png"],
-    colors: ["red", "black"],
-    sizes: ["s", "m", "l", "xl"]
+  
   },
   {
     name: "Maddy Jeans",
@@ -79,8 +72,7 @@ export const products = [
 
     featured: true,
     images: ["/images/Maddy.png"],
-    colors: ["Black"],
-    sizes: ["s", "m", "l", "xl"]
+   
   },
   {
     name: "Stella Suit",
@@ -92,8 +84,7 @@ export const products = [
 
     featured: true,
     images: ["/images/Grey_Suit.png"],
-    colors: ["Grey"],
-    sizes: ["s", "m", "l", "xl"]
+ 
   },
 
   {
@@ -106,8 +97,7 @@ export const products = [
     
     featured: true,
     images: ["/images/Green_Corset.png"],
-    colors: ["Gold"],
-    sizes: ["s", "m", "l", "xl"]
+
   },
 
   {
@@ -120,8 +110,7 @@ export const products = [
 
     featured: true,
     images: ["/images/Ludvige.png"],
-    colors: ["Biege"],
-    sizes: ["s", "m", "l", "xl"]
+ 
   },
 
   {
@@ -134,8 +123,7 @@ export const products = [
 
     featured: true,
     images: ["/images/Zack.png"],
-    colors: ["Brown"],
-    sizes: ["s", "m", "l", "xl"]
+   
   },
 
   {
@@ -148,8 +136,7 @@ export const products = [
 
     featured: true,
     images: ["/images/Mark.png"],
-    colors: ["Brown"],
-    sizes: ["s", "m", "l", "xl"]
+
   },
 
   {
@@ -162,8 +149,7 @@ export const products = [
 
     featured: true,
     images: ["/images/Ando.png"],
-    colors: ["Green"],
-    sizes: ["s", "m", "l", "xl"]
+  
   },
 
 ];
