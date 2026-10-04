@@ -1,25 +1,23 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import { prisma } from "./lib/prisma";
+
+// import authRoutes from "./routes/authRoutes";
+import userRoutes from "./routes/userRoutes";
+import productRoutes from "./routes/productRoutes";
+import cartRoutes from "./routes/cartRoutes";
+import wishlistRoutes from "./routes/wishlistRoutes";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.get("/api/products", async (req, res) => {
-  const { collection, category } = req.query;
-
-  const products = await prisma.product.findMany({
-    where: {
-      ...(collection && { collection: String(collection) }),
-      ...(category && { category: String(category) }),
-    },
-  });
-
-  res.json(products);
-});
+// app.use("/api/auth", authRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/cart", cartRoutes);
+app.use("/api/wishlist", wishlistRoutes);
 
 const PORT = 3001;
 
