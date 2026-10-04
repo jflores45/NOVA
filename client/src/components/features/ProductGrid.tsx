@@ -15,7 +15,7 @@ function ProductGrid({ collection, category }: ProductGridProps) {
   
   useEffect(() => {
 
-    console.log("Fetching from:", `${import.meta.env.VITE_API_URL}/api/products`);
+    // console.log("Fetching from:", `${import.meta.env.VITE_API_URL}/api/products`);
     let url = `${import.meta.env.VITE_API_URL}/api/products`;
 
     if (collection){

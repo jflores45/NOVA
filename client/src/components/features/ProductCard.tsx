@@ -14,7 +14,7 @@ function ProductCard({ product }: ProductCardProps) {
       <div style={{ textAlign: "left", height: "400px" }}>
         <div style={{ position: "relative" }}>
           <img
-            src={product.images[0]}
+            src={product.images[0]?.url}
             alt={product.name}
             width="300"
             height="400"

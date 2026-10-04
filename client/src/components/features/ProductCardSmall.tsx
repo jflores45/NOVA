@@ -10,7 +10,7 @@ function ProductCardSmall({ product }: ProductCardProps) {
     <Link to={`/product/${product.id}`} style={{ textDecoration: "none", color: "inherit" }} >
       <div style={{ position: "relative", width: "300px", height: "350px" }}>
           <img
-            src={product.images[0]}
+            src={product.images[0]?.url}
             alt={product.name}
             width="300"
             height="350"
