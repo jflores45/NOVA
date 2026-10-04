@@ -10,9 +10,9 @@ function EditorialCard({ type }: { type: "female" | "male" }) {
     const heading = type === "female" ? "Women Fall 2026" : "Men Fall 2026";
   
     return (
-      <CarouselBackground images={images}>
+      <CarouselBackground images={ images }>
         <div style={{ position: "absolute", bottom: "0", left: "0", padding: "60px", width: "35%", color: "white" }}>
-          <h3 style={{ margin: "0 0 16px 0" }}>{heading}</h3>
+          <h3 style={{ margin: "0 0 16px 0" }}>{ heading }</h3>
           <p style={{ margin: "0 0 24px 0" }}>
             This season's looks are filled with vibrant collections of classic elevated basics, accessories, and timeless outwear.
           </p>
