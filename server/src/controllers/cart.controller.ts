@@ -5,7 +5,7 @@
 import { Request, Response } from "express";
 import { prisma } from "../lib/prisma";
 
-export async function getCart (req: Request, res: Response ) {
+export async function getCart ( req: Request, res: Response ) {
     try {
         const userId = Number(req.params?.id);
 
@@ -27,7 +27,7 @@ export async function getCart (req: Request, res: Response ) {
 }
 }
 
-export async function addItems (req: Request, res: Response ) {
+export async function addItems ( req: Request, res: Response ) {
     try {
         const { productId, quantity } = req.body;
 

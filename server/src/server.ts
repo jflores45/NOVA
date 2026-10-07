@@ -4,6 +4,8 @@ import cors from "cors";
 
 // import authRoutes from "./routes/authRoutes";
 import userRoutes from "./routes/userRoutes";
+import editorialRoutes from "./routes/editorialRoutes";
+import trendRoutes from "./routes/trendRoutes";
 import productRoutes from "./routes/productRoutes";
 import cartRoutes from "./routes/cartRoutes";
 import wishlistRoutes from "./routes/wishlistRoutes";
@@ -15,6 +17,8 @@ app.use(express.json());
 
 // app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/editorial", editorialRoutes);
+app.use("/api/trend", trendRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/wishlist", wishlistRoutes);

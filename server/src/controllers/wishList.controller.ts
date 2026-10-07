@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { prisma } from "../lib/prisma";
 
-// GET    /api/wishlist
+// GET  /api/wishlist
 export async function getWishList( req: Request, res: Response ) {
     const userId = req.user.userId;
 
@@ -17,7 +17,7 @@ export async function getWishList( req: Request, res: Response ) {
     res.json(wishlist);
 }
 
-// POST   /api/wishlist
+// POST /api/wishlist
 export async function addItems(req: Request, res: Response) {
     const userId = req.user.userId;
     const { productId } = req.body;
