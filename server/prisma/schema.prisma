@@ -13,13 +13,13 @@ datasource db {
 
 // USER:
 model User {
-  id             Int      @id @default(autoincrement())
-  email          String   @unique @db.VarChar(255)
+  id             Int     @id @default(autoincrement())
+  email          String  @unique @db.VarChar(255)
   hashedPassword String?
-  name           String?  @db.VarChar(30)
+  name           String? @db.VarChar(30)
 
-  cart      Cart?
-  wishlist  WishlistItem[]
+  cart     Cart?
+  wishlist WishlistItem[]
 
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
@@ -29,12 +29,12 @@ model User {
 
 // CART:
 model Cart {
-  id        Int  @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  userId    Int  @unique @map("user_id")
-  user      User @relation(fields: [userId], references: [id])
+  userId Int  @unique @map("user_id")
+  user   User @relation(fields: [userId], references: [id])
 
-  items     CartItem[]
+  items CartItem[]
 
   createdAt DateTime @default(now()) @map("created_at")
 
@@ -43,14 +43,14 @@ model Cart {
 
 // CART ITEM:
 model CartItem {
-  id        Int  @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  quantity  Int  @default(1)
+  quantity Int @default(1)
 
-  cartId    Int  @map("cart_id")
-  cart      Cart @relation(fields: [cartId], references: [id])
+  cartId Int  @map("cart_id")
+  cart   Cart @relation(fields: [cartId], references: [id])
 
-  productId Int @map("product_id")
+  productId Int     @map("product_id")
   product   Product @relation(fields: [productId], references: [id])
 
   @@map("cart_item")
@@ -58,26 +58,26 @@ model CartItem {
 
 // WISH LIST ITEM:
 model WishlistItem {
-  id        Int      @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  userId    Int      @map("user_id")
-  productId Int      @map("product_id")
+  userId    Int @map("user_id")
+  productId Int @map("product_id")
 
-  user      User     @relation(fields: [userId], references: [id])
-  product   Product  @relation(fields: [productId], references: [id])
+  user    User    @relation(fields: [userId], references: [id])
+  product Product @relation(fields: [productId], references: [id])
 
   createdAt DateTime @default(now()) @map("created_at")
-  
+
   @@unique([userId, productId])
   @@map("wish_list")
 }
 
 // PRODUCT IMAGE:
 model ProductImage {
-  id        Int     @id @default(autoincrement())
-  url       String
+  id  Int    @id @default(autoincrement())
+  url String
 
-  sortOrder Int     @map("sort_order")
+  sortOrder Int @map("sort_order")
 
   productId Int     @map("product_id")
   product   Product @relation(fields: [productId], references: [id])
@@ -85,26 +85,101 @@ model ProductImage {
   @@map("product_images")
 }
 
-
 // PRODUCT:
 model Product {
   id          Int     @id @default(autoincrement())
   name        String  @db.VarChar(100)
   price       Decimal @db.Decimal(10, 2)
-  description String 
+  description String
 
-  collection  String?
-  category    String
-  featured    Boolean @default(false)
+  collection String?
+  category   String
+  featured   Boolean @default(false)
 
-  images      ProductImage[]
+  images ProductImage[]
 
-  createdAt   DateTime @default(now()) @map("created_at")
+  createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
 
-  cartItems   CartItem[]
+  cartItems    CartItem[]
   wishlistedBy WishlistItem[]
 
   @@map("products")
 }
 
+enum Category {
+  WOMEN
+  MEN
+}
+
+// EDITORIAL COLLECTION:
+model EditorialCollection {
+  id String @id @default(uuid())
+
+  title String
+  slug  String @unique
+
+  description String
+
+  season   String
+  category Category
+
+  coverImage String
+
+  featured Boolean @default(false)
+
+  images EditorialImage[]
+
+  createdAt DateTime @default(now())
+
+  @@map("editorial_collection")
+}
+
+// EDITORIAL IMAGES:
+model EditorialImage {
+  id String @id @default(uuid())
+
+  imageUrl  String
+  caption   String?
+  sortOrder Int
+
+  collectionId String
+  collection   EditorialCollection @relation(fields: [collectionId], references: [id])
+
+  @@map("editorial_image")
+}
+
+// COLOR TRENDS:
+model ColorTrend {
+  id String @id @default(uuid())
+
+  title  String
+  season String
+
+  description String
+
+  colorHex String
+
+  featured Boolean @default(false)
+
+  slides TrendSlide[]
+
+  @@map("color_trend")
+}
+
+// TREND SLIDE:
+model TrendSlide {
+  id String @id @default(uuid())
+
+  imageUrl String
+
+  designer String
+  season   String
+
+  sortOrder Int
+
+  trendId String
+  trend   ColorTrend @relation(fields: [trendId], references: [id])
+
+  @@map("trend_slide")
+}
