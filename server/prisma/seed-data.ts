@@ -1,3 +1,43 @@
+import { Category } from "@prisma/client";
+
+export const editorialCollections = [
+  {
+    title: "Women Fall 2026",
+    slug: "women-fall-2026",
+    description:
+      "This season's looks are filled with vibrant collections of classic elevated basics, accessories, and timeless outerwear.",
+    season: "Fall 2026",
+    category: Category.WOMEN,
+    coverImage: "/images/editorial-w1.png",
+    featured: true,
+
+    images: [
+      "/images/editorial-w1.png",
+      "/images/editorial-w2.png",
+      "/images/editorial-w3.png",
+      "/images/editorial-w4.png",
+    ],
+  },
+
+  {
+    title: "Men Fall 2026",
+    slug: "men-fall-2026",
+    description:
+      "Tailored silhouettes, textured fabrics, and modern essentials define this season's menswear edit.",
+    season: "Fall 2026",
+    category: Category.MEN,
+    coverImage: "/images/editorial-m1.png",
+    featured: true,
+
+    images: [
+      "/images/editorial-m1.png",
+      "/images/editorial-m2.png",
+      "/images/editorial-m3.png",
+      "/images/editorial-m4.png",
+    ],
+  },
+];
+
 export const products = [
   {
     name: "Cassie Cashmere Sweater",
