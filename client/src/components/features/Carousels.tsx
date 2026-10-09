@@ -1,14 +1,8 @@
-
 import { useState } from "react";
-
-type Slide = {
-    image: string;
-    designer: string;
-    season: string;
-};
+import type { TrendSlide } from "../../types/Trend";
   
 type CarouselProps = {
-    slides: Slide[];
+    slides: TrendSlide[];
 };
   
 function Carousels({ slides }: CarouselProps) {
@@ -18,10 +12,9 @@ function Carousels({ slides }: CarouselProps) {
   
     return (
         <div>
-
           <div style={{ display: "flex", justifyContent: "center" }}>
             <button onClick={() => setCurrentIndex(currentIndex === 0 ? slides.length - 1 : currentIndex - 1)} style={{backgroundColor: "black", border: "none", padding: "20px"}}> | </button>
-            <img src={slide.image} width="450" height="650" style={{ objectFit: "cover" }} />
+            <img src={slide.imageUrl} width="450" height="650" style={{ objectFit: "cover" }} />
             <button onClick={() => setCurrentIndex(currentIndex === slides.length - 1 ? 0 : currentIndex + 1)} style={{backgroundColor:"black", border: "none", padding: "20px"}}> | </button>
           </div>
         
@@ -29,7 +22,6 @@ function Carousels({ slides }: CarouselProps) {
               <p>{slide.designer}</p>
               <p>{slide.season}</p>
           </div>
-
         </div>
     );
   }
