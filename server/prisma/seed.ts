@@ -1,13 +1,16 @@
 import "dotenv/config";
 import { prisma } from "../src/lib/prisma";
 import { products } from "./seed-data";
-import { editorialCollections } from "./seed-data"
+import { editorialCollections } from "./seed-data";
+import { ColorTrend } from "./seed-data";
 
 async function main() {
   await prisma.editorialImage.deleteMany();
   await prisma.editorialCollection.deleteMany();
   await prisma.productImage.deleteMany();
   await prisma.product.deleteMany();
+  await prisma.colorTrend.deleteMany();
+  await prisma.colorTrend.deleteMany();
 
   for (const collection of editorialCollections) {
     await prisma.editorialCollection.create({
@@ -50,8 +53,32 @@ async function main() {
     });
   }
 
+  for (const trend of ColorTrend) {
+    await prisma.colorTrend.create({
+      data: {
+        title: trend.title,
+        season: trend.season,
+        slug: trend.slug,
+        description: trend.description,
+        colorHex: trend.colorHex,
+        featured: trend.featured,
+
+        slides: {
+          create: trend.slides.map((slide, index) => ({
+            imageUrl: slide.imageUrl, 
+            designer: slide.designer, 
+            season: slide.season, 
+            sortOrder: index + 1,
+          })),
+        },
+      },
+    });
+  }
+
+
   console.log(`Seeded ${editorialCollections.length} editorials`);
   console.log(`Seeded ${products.length} products`);
+  console.log(`Seeded ${ColorTrend.length} trends`);
 
 }
 

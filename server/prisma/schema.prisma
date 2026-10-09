@@ -155,6 +155,7 @@ model ColorTrend {
 
   title  String
   season String
+  slug String @unique
 
   description String
 
