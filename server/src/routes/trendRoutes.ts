@@ -1,11 +1,9 @@
 import { Router } from "express";
 
-import {
-  getTrend,
-} from "../controllers/trend.controller";
+import { getTrend, } from "../controllers/trend.controller";
 
 const router = Router();
 
-router.get("/trend", getTrend);
+router.get("/", getTrend);
 
 export default router;

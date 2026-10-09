@@ -18,7 +18,7 @@ app.use(express.json());
 // app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/editorial", editorialRoutes);
-app.use("/api/trend", trendRoutes);
+app.use("/api/trends", trendRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/wishlist", wishlistRoutes);

@@ -4,13 +4,17 @@ import { prisma } from "../lib/prisma";
 // GET  /api/editorial
 export async function getTrend( req: Request, res: Response ) {
     try {
-      const collections = await prisma.colorTrend.findMany({
+      const color = await prisma.colorTrend.findMany({
         include: {
-          images: true,
+          slides: {
+            orderBy: {
+              sortOrder: "asc",
+            },
+          },
         },
       });
   
-      res.json(collections);
+      res.json(color);
     } catch (error) {
       console.error(error);
   
