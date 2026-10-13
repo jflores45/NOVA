@@ -47,7 +47,7 @@ export const products = [
     category: "women",
     type: "sweaters",
     description: "100% cashmere sweater",
-    collection:"butter_yellow",
+    collection:"butter-yellow",
 
     featured: true,
     images: ["/images/Cassie_Sweater.png"],
@@ -60,7 +60,7 @@ export const products = [
     category: "women",
     type: "heels",
     description: "Kitten Heels",
-    collection:"butter_yellow",
+    collection:"butter-yellow",
 
     featured: true,
     images: ["/images/Cassie_Kitten_Heel.png"],
@@ -73,7 +73,7 @@ export const products = [
     category: "women",
     type: "top",
     description: "Cotton Wrap Top",
-    collection:"butter_yellow",
+    collection:"butter-yellow",
 
     featured: true,
     images: ["/images/Cassie_Wrap_Top.png"],
@@ -86,7 +86,7 @@ export const products = [
     category: "women",
     type: "socks",
     description: "100% cashmere sweater",
-    collection:"butter_yellow",
+    collection:"butter-yellow",
 
     featured: true,
     images: ["/images/Cassie_Socks.png"],
@@ -98,7 +98,7 @@ export const products = [
     category: "women",
     type: "one-piece",
     description: "Red Track Suit",
-    collection: "women editorial",
+    collection: "women-editorial",
 
     featured: true,
     images: ["/images/red_trackSuit.png"],
@@ -110,7 +110,7 @@ export const products = [
     category: "women",
     type: "Jeans",
     description: "black denim 100% cotton",
-    collection: "women editorial",
+    collection: "women-editorial",
 
     featured: true,
     images: ["/images/Maddy.png"],
@@ -122,7 +122,7 @@ export const products = [
     category: "women",
     type: "Suit",
     description: "Plat Suit",
-    collection: "women editorial",
+    collection: "women-editorial",
 
     featured: true,
     images: ["/images/Grey_Suit.png"],
@@ -135,7 +135,7 @@ export const products = [
     category: "women",
     type: "Top",
     description: "Plat Suit",
-    collection: "women editorial",
+    collection: "women-editorial",
     
     featured: true,
     images: ["/images/Green_Corset.png"],
@@ -148,7 +148,7 @@ export const products = [
     category: "men",
     type: "Jacket",
     description: "Fur lines Jacket",
-    collection: "men editorial",
+    collection: "men-editorial",
 
     featured: true,
     images: ["/images/Ludvige.png"],
@@ -161,7 +161,7 @@ export const products = [
     category: "men",
     type: "Jacket",
     description: "Brown white striped and lined Jacket",
-    collection: "men editorial",
+    collection: "men-editorial",
 
     featured: true,
     images: ["/images/Zack.png"],
@@ -174,7 +174,7 @@ export const products = [
     category: "men",
     type: "Jacket",
     description: "lined Jacket",
-    collection: "men editorial",
+    collection: "men-editorial",
 
     featured: true,
     images: ["/images/Mark.png"],
@@ -187,7 +187,7 @@ export const products = [
     category: "men",
     type: "Jacket",
     description: "lined Jacket",
-    collection: "men editorial",
+    collection: "men-editorial",
 
     featured: true,
     images: ["/images/Ando.png"],

@@ -5,13 +5,17 @@ import { editorialCollections } from "./seed-data";
 import { ColorTrend } from "./seed-data";
 
 async function main() {
-  await prisma.editorialImage.deleteMany();
-  await prisma.editorialCollection.deleteMany();
-  await prisma.productImage.deleteMany();
-  await prisma.product.deleteMany();
-  await prisma.colorTrend.deleteMany();
+  await prisma.trendSlide.deleteMany();
   await prisma.colorTrend.deleteMany();
 
+  await prisma.editorialImage.deleteMany();
+  await prisma.editorialCollection.deleteMany();
+
+  await prisma.cartItem.deleteMany();
+  await prisma.wishlistItem.deleteMany();
+  await prisma.productImage.deleteMany();
+  await prisma.product.deleteMany();
+  
   for (const collection of editorialCollections) {
     await prisma.editorialCollection.create({
       data: {
