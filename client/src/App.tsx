@@ -1,8 +1,9 @@
-import WomenPage from './pages/WomenPage';
 import MainPage from './pages/MainPage';
 import CartPage from "./pages/CartPage";
 import LikePage from "./pages/LikePage";
 import UserPage from "./pages/UserPage";
+import WomenPage from './pages/WomenPage';
+import MenPage from './pages/MenPage';
 import ProductPage from "./pages/ProductPage";
 import NavBar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/user" element={<UserPage/>} />
           <Route path="/women" element={<WomenPage />} />
+          <Route path="/men" element={<MenPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/likes" element={<LikePage />} />
           <Route path="/user" element={<UserPage />} />
