@@ -3,11 +3,16 @@ import { useState, useEffect } from "react";
 import type { ColorTrend } from "../../types/Trend";
 import Carousels from "../features/Carousels"
 
-function TrendCard() {
+type TrendCardProps = {
+    color: string;
+    setColor: (color: string) => void;
+};
+ 
+function TrendCard({ color, setColor }: TrendCardProps) {
     const [trends, setTrends] = useState<ColorTrend[]>([]);
-    const [selectedSlug, setSelectedSlug] = useState("tomato-red");
+    // const [selectedSlug, setSelectedSlug] = useState("tomato-red");
 
-    const selectedTrend = trends.find((trend) => trend.slug === selectedSlug);
+    const selectedTrend = trends.find((trend) => trend.slug === color);
 
     useEffect(() => {
         async function loadTrends() {
@@ -44,14 +49,14 @@ function TrendCard() {
                 </div> */}
 
                 <div style={{display: "flex", flex: "space-between", justifyContent: "center", gap: "20px", paddingBottom: "20px"}}> 
-                    <button onClick={() => setSelectedSlug("tomato-red")} style={{background: "#d00c23", height: "100px", width: "100px", border: "none", borderRadius: "5px"}}></button>
-                    <button onClick={() => setSelectedSlug("powder-pink")} style={{background: "#f0cec0", height: "100px", width: "100px", border: "none", borderRadius: "5px"}}></button>
-                    <button onClick={() => setSelectedSlug("butter-yellow")} style={{background: "#faf7d9", height: "100px", width: "100px", border: "none", borderRadius: "5px"}}></button>
-                    <button onClick={() => setSelectedSlug("mocha-mousse")} style={{background: "#56433a", height: "100px", width: "100px", border: "none", borderRadius: "5px"}}></button>
-                    <button onClick={() => setSelectedSlug("lime-green")} style={{background: "#aaad2b", height: "100px", width: "100px", border: "none", borderRadius: "5px"}}></button>
+                    <button onClick={() => setColor("tomato-red")} style={{background: "#d00c23", height: "100px", width: "100px", border: "none", borderRadius: "5px"}}></button>
+                    <button onClick={() => setColor("powder-pink")} style={{background: "#f0cec0", height: "100px", width: "100px", border: "none", borderRadius: "5px"}}></button>
+                    <button onClick={() => setColor("butter-yellow")} style={{background: "#faf7d9", height: "100px", width: "100px", border: "none", borderRadius: "5px"}}></button>
+                    <button onClick={() => setColor("mocha-mousse")} style={{background: "#56433a", height: "100px", width: "100px", border: "none", borderRadius: "5px"}}></button>
+                    <button onClick={() => setColor("lime-green")} style={{background: "#aaad2b", height: "100px", width: "100px", border: "none", borderRadius: "5px"}}></button>
                 </div>
 
-                <Carousels key={selectedTrend} slides={selectedTrend.slides} />
+                <Carousels key={selectedTrend.slug} slides={selectedTrend.slides} />
 
             </div>
         </div>
