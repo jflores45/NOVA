@@ -1,16 +1,18 @@
 import CarouselBackground from "./CarouselBackground";
-import type { EditorialCollection } from "../../types/Editorial";
+import type { EditorialFeature } from "../../types/Editorial";
 
-function EditorialCard({ collection, } : { collection: EditorialCollection; }){
+type EditorialCardProps = {
+  collection: EditorialFeature;
+};
+
+function EditorialCard({ collection }: EditorialCardProps) {
     // const images =
     //   type === "female"
     //     ? ["/images/editorial-w1.png", "/images/editorial-w2.png", "/images/editorial-w3.png", "/images/editorial-w4.png"]
     //     : ["/images/editorial-m1.png", "/images/editorial-m2.png", "/images/editorial-m3.png", "/images/editorial-m4.png"];
   
     // const heading = type === "female" ? "Women Fall 2026" : "Men Fall 2026";
-    const images = collection.images.map(
-      (image) => image.imageUrl
-    );
+    const images = collection.images.map((image) => image.imageUrl);
 
     return (
       <CarouselBackground images={ images }>

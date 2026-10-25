@@ -1,11 +1,13 @@
-export type EditorialImage = {
+import type { Product } from "./Product";
+
+export type EditorialFeatureImage = {
     id: string;
     imageUrl: string;
     caption?: string;
     sortOrder: number;
 };
   
-  export type EditorialCollection = {
+export type EditorialFeature = {
     id: string;
     title: string;
     description: string;
@@ -13,5 +15,21 @@ export type EditorialImage = {
     category: string;
     coverImage: string;
     featured: boolean;
-    images: EditorialImage[];
+    images: EditorialFeatureImage[];
+};
+
+export type EditorialLookProduct = {
+  productId: number;
+  sortOrder: number;
+  product: Product;
+};
+
+export type EditorialLook = {
+  id: string;
+  title: string;
+  slug: string;
+  category: string;
+  coverImage: string;
+  featured: boolean;
+  products: EditorialLookProduct[];
 };

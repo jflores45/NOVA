@@ -22,7 +22,6 @@ function App() {
           <Route path="/men" element={<MenPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/likes" element={<LikePage />} />
-          <Route path="/user" element={<UserPage />} />
           <Route path="/product" element={<ProductPage />} />
           <Route path="/product/:id" element={<ProductPage />} />
       </Routes>

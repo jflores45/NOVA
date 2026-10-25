@@ -7,14 +7,12 @@ type ProductGridProps = {
   category?: string;
 };
 
-function ProductGrid({ collection, category }: ProductGridProps) {
-
+function ProductGrid({ collection, category, }: ProductGridProps) {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   
   useEffect(() => {
-
     let url = `${import.meta.env.VITE_API_URL}/api/products`;
 
     if (collection){
