@@ -1,9 +1,9 @@
 import { Router } from "express";
-
-import { getEditorial, } from "../controllers/editorial.controller";
+import { getEditorialFeatures, getEditorialLooks, } from "../controllers/editorial.controller";
 
 const router = Router();
 
-router.get("/", getEditorial);
+router.get("/features", getEditorialFeatures);
+router.get("/looks", getEditorialLooks);
 
 export default router;

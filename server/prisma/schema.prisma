@@ -81,7 +81,7 @@ model ProductImage {
 
   productId Int     @map("product_id")
   product   Product @relation(fields: [productId], references: [id])
-
+  
   @@map("product_images")
 }
 
@@ -104,6 +104,8 @@ model Product {
   cartItems    CartItem[]
   wishlistedBy WishlistItem[]
 
+  editorialLookProducts EditorialLookProduct[]
+
   @@map("products")
 }
 
@@ -112,41 +114,62 @@ enum Category {
   MEN
 }
 
-// EDITORIAL COLLECTION:
-model EditorialCollection {
-  id String @id @default(uuid())
-
-  title String
-  slug  String @unique
-
+// EDITORIAL FEATURE:
+model EditorialFeature {
+  id          String   @id @default(uuid())
+  title       String
+  slug        String   @unique
   description String
+  season      String
+  category    Category
+  coverImage  String   @map("cover_image")
+  featured    Boolean  @default(false)
+  images      EditorialFeatureImage[]
+  createdAt   DateTime @default(now()) @map("created_at")
 
-  season   String
-  category Category
-
-  coverImage String
-
-  featured Boolean @default(false)
-
-  images EditorialImage[]
-
-  createdAt DateTime @default(now())
-
-  @@map("editorial_collection")
+  @@map("editorial_feature")
 }
 
-// EDITORIAL IMAGES:
-model EditorialImage {
-  id String @id @default(uuid())
+// EDITORIAL FEATURE IMAGES:
+model EditorialFeatureImage {
+  id         String  @id @default(uuid())
+  imageUrl   String  @map("image_url")
+  caption    String?
+  sortOrder  Int     @default(0) @map("sort_order")
+  featureId  String  @map("feature_id")
 
-  imageUrl  String
-  caption   String?
-  sortOrder Int
+  feature EditorialFeature @relation(fields: [featureId], references: [id], onDelete: Cascade)
 
-  collectionId String
-  collection   EditorialCollection @relation(fields: [collectionId], references: [id])
+  @@map("editorial_feature_image")
+}
 
-  @@map("editorial_image")
+// EDITORIAL LOOK:
+model EditorialLook {
+  id         String   @id @default(uuid())
+  title      String
+  slug       String   @unique
+  category   Category
+  coverImage String   @map("cover_image")
+  featured   Boolean  @default(false)
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  products EditorialLookProduct[]
+
+  @@map("editorial_look")
+}
+
+// EDITORIAL LOOK PRODUCT:
+model EditorialLookProduct {
+  editorialLookId String @map("editorial_look_id")
+  productId       Int    @map("product_id")
+  sortOrder       Int    @default(0) @map("sort_order")
+
+  editorialLook EditorialLook @relation(fields: [editorialLookId], references: [id], onDelete: Cascade)
+  product       Product       @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@id([editorialLookId, productId])
+  @@index([productId])
+  @@map("editorial_look_product")
 }
 
 // COLOR TRENDS:
