@@ -39,7 +39,7 @@ function EditorialGrid({ collection }: EditorialGridProps) {
                 onClick={() => setSelectedLook(look)}
                 style={{
                   position: "absolute",
-                  bottom: "20px",
+                  bottom: "360px",
                   right: "40px",
                   background: "none",
                   border: "none",
@@ -47,7 +47,7 @@ function EditorialGrid({ collection }: EditorialGridProps) {
                 }}
               >
                 <img
-                  src="/images/Add.png"
+                  src="/images/More.png"
                   alt=""
                   style={{ height: "30px" }}
                 />

@@ -31,24 +31,24 @@ function EditorialSidePanel({ products, onClose }: ProductCardProps) {
       </div>
 
       {products.map((item) => (
-            <div key={item.id}>
-                <h4>{item.name}</h4>
-
-                <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                {item.images.map((image) => (
-                    <img
-                    key={image.id}
-                    src={image.url}
-                    alt={item.name}
-                    width="100"
-                    height="120"
-                    style={{ objectFit: "cover" }}
-                    />
-                ))}
+            <div key={item.id} style={{ display: "flex"}}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "8px", padding:"20px" }}>
+                    {/* {item.images.map((image) => ( */}
+                        <img
+                        key={item.id}
+                        src={item.images[0]?.url}
+                        alt={item.name}
+                        width="150"
+                        height="180"
+                        style={{ objectFit: "cover" }}
+                        />
+                    {/* ))} */}
                 </div>
-
-                <p>${item.price}</p>
-                <button type="button">Add to cart</button>
+                <div>
+                    <p>{item.name}</p>
+                    <p>${item.price}</p>
+                    <button type="button">Add to cart</button>
+                </div>
             </div>
         ))}
     </div>
