@@ -34,3 +34,30 @@ h1, h2, h3 {
   letter-spacing: .10em;
   font-weight: 400;
 }
+
+.swatch {
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 100px;
+  width: 100px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: transform 0.12s ease-out, opacity 0.12s ease-out;
+}
+
+/* PHASE 1, nothing selected yet: hovering one shrinks the others */
+.swatches:not(:has(.selected)):has(.swatch:hover) .swatch:not(:hover) {
+  transform: scale(0.8);
+  opacity: 0.6;
+}
+
+/* PHASE 2, something is selected: everything else stays shrunk, hover or not */
+.swatches:has(.selected) .swatch:not(.selected) {
+  transform: scale(0.8);
+  opacity: 0.6;
+}
+
+@keyframes fill {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
