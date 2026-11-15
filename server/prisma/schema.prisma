@@ -50,8 +50,8 @@ model CartItem {
   cartId Int  @map("cart_id")
   cart   Cart @relation(fields: [cartId], references: [id])
 
-  productId Int     @map("product_id")
-  product   Product @relation(fields: [productId], references: [id])
+  variantId Int            @map("variant_id")
+  variant   ProductVariant @relation(fields: [variantId], references: [id], onDelete: Cascade)
 
   @@map("cart_item")
 }
@@ -81,7 +81,7 @@ model ProductImage {
 
   productId Int     @map("product_id")
   product   Product @relation(fields: [productId], references: [id])
-  
+
   @@map("product_images")
 }
 
@@ -92,21 +92,37 @@ model Product {
   price       Decimal @db.Decimal(10, 2)
   description String
 
-  collection String?
   category   String
-  featured   Boolean @default(false)
+  group      String
+  collection String?
 
-  images ProductImage[]
+  images   ProductImage[]
+  variants ProductVariant[]
 
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
 
-  cartItems    CartItem[]
-  wishlistedBy WishlistItem[]
-
+  wishlistedBy          WishlistItem[]
   editorialLookProducts EditorialLookProduct[]
 
   @@map("products")
+}
+
+// PRODUCT VARIANT:
+model ProductVariant {
+  id        Int     @id @default(autoincrement())
+  productId Int     @map("product_id")
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  size  String
+  color String
+  stock Int     @default(0)
+  sku   String? @unique
+
+  cartItems CartItem[]
+
+  @@unique([productId, size, color])
+  @@map("product_variants")
 }
 
 enum Category {
@@ -116,27 +132,27 @@ enum Category {
 
 // EDITORIAL FEATURE:
 model EditorialFeature {
-  id          String   @id @default(uuid())
+  id          String                  @id @default(uuid())
   title       String
-  slug        String   @unique
+  slug        String                  @unique
   description String
   season      String
   category    Category
-  coverImage  String   @map("cover_image")
-  featured    Boolean  @default(false)
+  coverImage  String                  @map("cover_image")
+  featured    Boolean                 @default(false)
   images      EditorialFeatureImage[]
-  createdAt   DateTime @default(now()) @map("created_at")
+  createdAt   DateTime                @default(now()) @map("created_at")
 
   @@map("editorial_feature")
 }
 
 // EDITORIAL FEATURE IMAGES:
 model EditorialFeatureImage {
-  id         String  @id @default(uuid())
-  imageUrl   String  @map("image_url")
-  caption    String?
-  sortOrder  Int     @default(0) @map("sort_order")
-  featureId  String  @map("feature_id")
+  id        String  @id @default(uuid())
+  imageUrl  String  @map("image_url")
+  caption   String?
+  sortOrder Int     @default(0) @map("sort_order")
+  featureId String  @map("feature_id")
 
   feature EditorialFeature @relation(fields: [featureId], references: [id], onDelete: Cascade)
 
@@ -178,7 +194,7 @@ model ColorTrend {
 
   title  String
   season String
-  slug String @unique
+  slug   String @unique
 
   description String
 

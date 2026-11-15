@@ -144,386 +144,459 @@ export const products = [
     name: "Cassie Cashmere Sweater",
     price: 150,
     category: "women",
-    type: "sweaters",
+    group: "Tops",
+    collection: "butter_yellow",
     description: "100% cashmere sweater",
-    collection:"butter-yellow",
-
-    featured: true,
     images: ["/images/Cassie_Sweater.png"],
-
+    variants: [
+      { size: "s", color: "yellow", stock: 5 },
+      { size: "m", color: "yellow", stock: 3 },
+      { size: "l", color: "yellow", stock: 0 },
+    ],
   },
-
   {
     name: "Cassie Kitten Heels",
     price: 150,
     category: "women",
-    type: "heels",
+    group: "Shoes",
+    collection: "butter-yellow",
     description: "Kitten Heels",
-    collection:"butter-yellow",
-
-    featured: true,
     images: ["/images/Cassie_Kitten_Heel.png"],
-
+    variants: [
+      { size: "s", color: "yellow", stock: 5 },
+      { size: "m", color: "yellow", stock: 3 },
+      { size: "l", color: "yellow", stock: 0 },
+    ],
   },
-
   {
     name: "Cassie Cotton Wrap Top",
     price: 150,
     category: "women",
-    type: "top",
+    group: "Tops",
+    collection: "butter-yellow",
     description: "Cotton Wrap Top",
-    collection:"butter-yellow",
-
-    featured: true,
     images: ["/images/Cassie_Wrap_Top.png"],
-
+    variants: [
+      { size: "s", color: "yellow", stock: 5 },
+      { size: "m", color: "yellow", stock: 3 },
+      { size: "l", color: "yellow", stock: 0 },
+    ],
   },
-
   {
     name: "Cassie Daisy Socks",
     price: 15,
     category: "women",
-    type: "socks",
+    group: "Accessories",
+    collection: "butter-yellow",
     description: "100% cashmere sweater",
-    collection:"butter-yellow",
-
-    featured: true,
     images: ["/images/Cassie_Socks.png"],
-   
+    variants: [
+      { size: "s", color: "yellow", stock: 5 },
+      { size: "m", color: "yellow", stock: 3 },
+      { size: "l", color: "yellow", stock: 0 },
+    ],
   },
   {
     name: "Lola TrackSuit",
     price: 120,
     category: "women",
-    type: "one-piece",
+    group: "Top Bottoms",
+    collection: "tomato-red",
     description: "Lola Track Suit",
-    collection: "women-editorial",
-    featured: true,
     images: [
       "/images/lola-tracksuit.png",
+    ],
+    variants: [
+      { size: "s", color: "red", stock: 5 },
+      { size: "m", color: "red", stock: 3 },
+      { size: "l", color: "red", stock: 0 },
     ],
   },
   {
     name: "Lola Turtle-neck",
     price: 60,
     category: "women",
-    type: "top",
+    group: "Tops",
+    collection: "tomato-red",
     description: "Turtleneck worn in the Lola editorial",
-    collection: "women-editorial",
-    featured: true,
     images: [
       "/images/lola-turtleneck.png",
+      "/images/lola-turtleneck-45.png",
+      "/images/lola-turtleneck-90.png",
+      "/images/lola-turtleneck-180.png",
+    ],
+    variants: [
+      { size: "s", color: "red", stock: 5 },
+      { size: "m", color: "red", stock: 3 },
+      { size: "l", color: "red", stock: 0 },
     ],
   },
   {
     name: "Lola Bag",
     price: 90,
     category: "women",
-    type: "bag",
+    collection: "",
+    group: "Accessories",
     description: "Bag worn in the Lola editorial",
-    collection: "women-editorial",
-    featured: true,
     images: [
       "/images/lola-bag.png",
+    ],
+    variants: [
+      { size: "s", color: "black", stock: 5 },
+      { size: "m", color: "black", stock: 3 },
+      { size: "l", color: "black", stock: 0 },
     ],
   },
   {
     name: "Maddy Top",
     price: 80,
     category: "women",
-    type: "Jeans",
+    collection: "",
+    group: "Bottoms",
     description: "100% cotton",
-    collection: "women-editorial",
-
-    featured: true,
     images: ["/images/maddy-top.png"],
-   
+    variants: [
+      { size: "s", color: "black", stock: 5 },
+      { size: "m", color: "black", stock: 3 },
+      { size: "l", color: "black", stock: 0 },
+    ],
   },
   {
     name: "Maddy Jeans",
     price: 45,
     category: "women",
-    type: "Jeans",
+    collection: "",
+    group: "Bottoms",
     description: "black denim 100% cotton",
-    collection: "women-editorial",
-
-    featured: true,
     images: ["/images/Maddy-Jeans.png"],
-   
+    variants: [
+      { size: "s", color: "grey", stock: 5 },
+      { size: "m", color: "grey", stock: 3 },
+      { size: "l", color: "grey", stock: 0 },
+    ],
   },
   {
     name: "Stella Blazer",
     price: 120,
     category: "women",
-    type: "Suit",
+    collection: "",
+    group: "Tops",
     description: "Plat Blazer",
-    collection: "women-editorial",
-
-    featured: true,
     images: ["/images/Stella-Blazer.png"],
- 
+    variants: [
+      { size: "s", color: "grey", stock: 5 },
+      { size: "m", color: "grey", stock: 3 },
+      { size: "l", color: "grey", stock: 0 },
+    ],
   },
   {
     name: "Stella Shirt",
     price: 120,
     category: "women",
-    type: "Suit",
+    collection: "",
+    group: "Tops",
     description: "Shirt",
-    collection: "women-editorial",
-
-    featured: true,
     images: ["/images/Stella-Shirt.png"],
- 
+    variants: [
+      { size: "s", color: "blue", stock: 5 },
+      { size: "m", color: "blue", stock: 3 },
+      { size: "l", color: "blue", stock: 0 },
+    ],
   },
   {
     name: "Stella Skirt",
     price: 120,
     category: "women",
-    type: "Suit",
+    collection: "tomato-red",
+    group: "Tops",
     description: "Plat Suit",
-    collection: "women-editorial",
-
-    featured: true,
     images: ["/images/Stella-Skirt.png"],
- 
+    variants: [
+      { size: "s", color: "grey", stock: 5 },
+      { size: "m", color: "grey", stock: 3 },
+      { size: "l", color: "grey", stock: 0 },
+    ],
   },
   {
     name: "Stella Socks",
     price: 120,
     category: "women",
-    type: "Suit",
+    collection: "tomato-red",
+    group: "Accessories",
     description: "Plat Suit",
-    collection: "women-editorial",
-
-    featured: true,
     images: ["/images/Stella-Socks.png"],
- 
+    variants: [
+      { size: "s", color: "black", stock: 5 },
+      { size: "m", color: "black", stock: 3 },
+      { size: "l", color: "black", stock: 0 },
+    ],
   },
   {
     name: "Stella Heels",
     price: 120,
     category: "women",
-    type: "Suit",
-    description: "Plat Suit",
+    group: "Shoes",
     collection: "women-editorial",
-
-    featured: true,
+    description: "Plat Suit",
     images: ["/images/Stella-Heels.png"],
- 
+    variants: [
+      { size: "s", color: "black", stock: 5 },
+      { size: "m", color: "black", stock: 3 },
+      { size: "l", color: "black", stock: 0 },
+    ],
   },
-
   {
     name: "Margie Corset",
     price: 120,
     category: "women",
-    type: "Top",
-    description: "Gold encrusted corset top",
     collection: "women-editorial",
-    
-    featured: true,
+    group: "Tops",
+    description: "Gold encrusted corset top",
     images: ["/images/Margie_corset.png"],
+    variants: [
+      { size: "s", color: "gold", stock: 5 },
+      { size: "m", color: "gold", stock: 3 },
+      { size: "l", color: "gold", stock: 0 },
+    ],
   },
   {
     name: "Margie Necklace",
     price: 60,
     category: "women",
-    type: "accessory",
-    description: "Plat Suit",
     collection: "women-editorial",
-    
-    featured: true,
+    group: "Accessories",
+    description: "Plat Suit",
     images: ["/images/marg-necklace.png"],
+    variants: [
+      { size: "s", color: "gold", stock: 5 },
+      { size: "m", color: "gold", stock: 3 },
+      { size: "l", color: "gold", stock: 0 },
+    ],
   },
   {
     name: "Margie Skirt",
     price: 120,
     category: "women",
-    type: "Top",
-    description: "Gold encrusted corset top",
     collection: "women-editorial",
-    
-    featured: true,
+    group: "Tops",
+    description: "Gold encrusted corset top",
     images: ["/images/Margie-Skirt.png"],
+    variants: [
+      { size: "s", color: "blue", stock: 5 },
+      { size: "m", color: "blue", stock: 3 },
+      { size: "l", color: "blue", stock: 0 },
+    ],
   },
   {
     name: "Margie Boxing Gloves",
     price: 120,
     category: "women",
-    type: "Top",
-    description: "Gold encrusted corset top",
     collection: "women-editorial",
-    
-    featured: true,
+    group: "Accessories",
+    description: "Gold encrusted corset top",
     images: ["/images/Margie-Boxing-Gloves.png"],
+    variants: [
+      { size: "s", color: "red", stock: 5 },
+      { size: "m", color: "red", stock: 3 },
+      { size: "l", color: "red", stock: 0 },
+    ],
   },
   {
     name: "Ludvige Jacket",
     price: 500,
     category: "men",
-    type: "Jacket",
+    group: "Tops",
+    collection: "women-editorial",
     description: "Fur lines Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Ludvige-Pancho.png"],
- 
+    variants: [
+      { size: "s", color: "beige", stock: 5 },
+      { size: "m", color: "beige", stock: 3 },
+      { size: "l", color: "beige", stock: 0 },
+    ],
   },
   {
     name: "Ludvige Pants",
     price: 500,
     category: "men",
-    type: "Jacket",
+    group: "Bottoms",
+    collection: "women-editorial",
     description: "Fur lines Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Ludvige-Pants.png"],
- 
+    variants: [
+      { size: "s", color: "black", stock: 5 },
+      { size: "m", color: "black", stock: 3 },
+      { size: "l", color: "black", stock: 0 },
+    ],
   },
   {
     name: "Ludvige Shirt",
     price: 500,
     category: "men",
-    type: "Jacket",
+    group: "Tops",
+    collection: "women-editorial",
     description: "Fur lines Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Ludvige-Shirt.png"],
- 
+    variants: [
+      { size: "s", color: "white", stock: 5 },
+      { size: "m", color: "white", stock: 3 },
+      { size: "l", color: "white", stock: 0 },
+    ],
   },
   {
     name: "Ludvige Suspenders",
     price: 500,
     category: "men",
-    type: "Jacket",
+    group: "Accessories",
+    collection: "women-editorial",
     description: "Fur lines Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Ludvige-Suspenders.png"],
- 
+    variants: [
+      { size: "s", color: "black", stock: 5 },
+      { size: "m", color: "black", stock: 3 },
+      { size: "l", color: "black", stock: 0 },
+    ],
   },
   {
     name: "Zack Pin striped Suit",
     price: 250,
     category: "men",
-    type: "Jacket",
+    group: "Tops",
+    collection: "women-editorial",
     description: "Brown white striped and lined Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Zack.png"],
-   
+    variants: [
+      { size: "s", color: "brown", stock: 5 },
+      { size: "m", color: "brown", stock: 3 },
+      { size: "l", color: "brown", stock: 0 },
+    ],
   },
 
   {
     name: "Mark Blazer",
     price: 250,
     category: "men",
-    type: "Jacket",
+    group: "Jacket",
+    collection: "women-editorial",
     description: "lined Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Mark-Blazer.png"],
-
+    variants: [
+      { size: "s", color: "pink", stock: 5 },
+      { size: "m", color: "pink", stock: 3 },
+      { size: "l", color: "pink", stock: 0 },
+    ],
   },
   {
     name: "Mark Pant",
     price: 250,
     category: "men",
-    type: "Jacket",
+    group: "Bottoms",
+    collection: "women-editorial",
     description: "lined Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Mark-Pant.png"],
-
+    variants: [
+      { size: "s", color: "pink", stock: 5 },
+      { size: "m", color: "pink", stock: 3 },
+      { size: "l", color: "pink", stock: 0 },
+    ],
   },
   {
     name: "Mark Shirt",
     price: 250,
     category: "men",
-    type: "Jacket",
+    group: "Tops",
+    collection: "women-editorial",
     description: "lined Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Mark-Shirt.png"],
-
+    variants: [
+      { size: "s", color: "white", stock: 5 },
+      { size: "m", color: "white", stock: 3 },
+      { size: "l", color: "white", stock: 0 },
+    ],
   },
   {
     name: "Mark Tie",
     price: 250,
     category: "men",
-    type: "Jacket",
+    group: "Accessories",
+    collection: "women-editorial",
     description: "lined Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Mark-Tie.png"],
-
+    variants: [
+      { size: "s", color: "red", stock: 5 },
+      { size: "m", color: "red", stock: 3 },
+      { size: "l", color: "red", stock: 0 },
+    ],
   },
   {
     name: "Ando Green Suit",
     price: 250,
     category: "men",
-    type: "Jacket",
+    group: "Jackets",
+    collection: "women-editorial",
     description: "lined Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Ando_jacket.png"],
-  
+    variants: [
+      { size: "s", color: "green", stock: 5 },
+      { size: "m", color: "green", stock: 3 },
+      { size: "l", color: "green", stock: 0 },
+    ],
   },
   {
     name: "Ando Blazer",
     price: 250,
     category: "men",
-    type: "Jacket",
+    group: "Jackets",
+    collection: "women-editorial",
     description: "lined Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/ando-blazer.png"],
-  
+    variants: [
+      { size: "s", color: "green", stock: 5 },
+      { size: "m", color: "green", stock: 3 },
+      { size: "l", color: "green", stock: 0 },
+    ],
   },
   {
     name: "Ando Pant",
     price: 250,
     category: "men",
-    type: "Jacket",
+    group: "Bottoms",
+    collection: "women-editorial",
     description: "lined Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Ando-pants.png"],
-  
+    variants: [
+      { size: "s", color: "green", stock: 5 },
+      { size: "m", color: "green", stock: 3 },
+      { size: "l", color: "green", stock: 0 },
+    ],
   },
   {
     name: "Ando Necklace",
     price: 250,
     category: "men",
-    type: "Jacket",
+    group: "Accessories",
+    collection: "women-editorial",
     description: "lined Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Ando-pants.png"],
-  
+    variants: [
+      { size: "s", color: "silver", stock: 5 },
+      { size: "m", color: "silver", stock: 3 },
+      { size: "l", color: "silver", stock: 0 },
+    ],
   },
   {
     name: "Ando Glasses",
     price: 250,
     category: "men",
-    type: "Jacket",
+    group: "Accessories",
+    collection: "women-editorial",
     description: "lined Jacket",
-    collection: "men-editorial",
-
-    featured: true,
     images: ["/images/Ando-pants.png"],
-  
+    variants: [
+      { size: "s", color: "gold", stock: 5 },
+      { size: "m", color: "gold", stock: 3 },
+      { size: "l", color: "gold", stock: 0 },
+    ],
   },
 
 ];

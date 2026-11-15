@@ -10,6 +10,7 @@ async function main() {
   await prisma.editorialFeatureImage.deleteMany();
   await prisma.cartItem.deleteMany();
   await prisma.wishlistItem.deleteMany();
+  await prisma.productVariant.deleteMany();
   await prisma.productImage.deleteMany();
 
   // Delete parent records
@@ -25,9 +26,16 @@ async function main() {
         name: product.name,
         price: product.price,
         category: product.category,
-        description: product.description,
+        group: product.group,
         collection: product.collection,
-        featured: product.featured,
+        description: product.description,
+        variants: {
+          create: product.variants.map((v) => ({
+            size: v.size,
+            color: v.color,
+            stock: v.stock,
+          })),
+        },
         images: {
           create: product.images.map((image, index) => ({
             url: image,
