@@ -5,6 +5,7 @@ import UserPage from "./pages/UserPage";
 import WomenPage from './pages/WomenPage';
 import MenPage from './pages/MenPage';
 import ProductPage from "./pages/ProductPage";
+import ItemPage from "./pages/ItemPage";
 import NavBar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 
@@ -14,7 +15,7 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <NavBar />
+      <NavBar/>
       <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/user" element={<UserPage/>} />
@@ -23,7 +24,7 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/likes" element={<LikePage />} />
           <Route path="/product" element={<ProductPage />} />
-          <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/product/:id" element={<ItemPage />} />
       </Routes>
       <Footer />
     </>

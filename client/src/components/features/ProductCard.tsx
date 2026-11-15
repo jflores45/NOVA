@@ -5,8 +5,7 @@ type ProductCardProps = {
   product: Product;
 };
 
-function ProductCard({ product, }: ProductCardProps) {
-
+function ProductCard({ product }: ProductCardProps) {
     return (
       <Link to={`/product/${product.id}`} style={{ textDecoration: "none", color: "inherit" }}>
         <div style={{ textAlign: "left", height: "400px" }}>
@@ -14,8 +13,8 @@ function ProductCard({ product, }: ProductCardProps) {
             <img
               src={product.images[0]?.url}
               alt={product.name}
-              width="300"
-              height="400"
+              width="200"
+              height="300"
               style={{ objectFit: "cover" }}
             />
 
@@ -28,7 +27,7 @@ function ProductCard({ product, }: ProductCardProps) {
                 border: "none",
               }}
             >
-              <img src="/images/Add.png" alt="Add" style={{ height: "30px" }} />
+              <img src="/images/Add.png" alt="Add" style={{ height: "25px" }} />
             </button>
           </div>
 
