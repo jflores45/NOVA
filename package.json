@@ -1,5 +1,7 @@
 {
     "scripts": {
-      "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\""
+      "dev": "tsx watch src/server.ts",
+      "build": "prisma generate && tsc",
+      "start": "node dist/server.js"
     }
 }
