@@ -48,15 +48,15 @@ export async function addItems ( req: Request, res: Response ) {
         
         // validate data before inputting
         // Create CartItem
-        const createItem = await prisma.cartItem.create({
-            data: { 
-                quantity,
-                cartId: cart.id,
-                productId,
-              },
-        });
+        // const createItem = await prisma.cartItem.create({
+        //     data: { 
+        //         quantity,
+        //         cartId: cart.id,
+        //         productId,
+        //       },
+        // });
     
-        res.status(201).json(createItem);
+        // res.status(201).json(createItem);
 
     } catch (error) {
         res.status(500).json({
