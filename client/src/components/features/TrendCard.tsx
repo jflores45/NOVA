@@ -52,13 +52,13 @@ const palette: Record<string, { name: string; hex: string }> = {
     "lime-green":    ["mocha-mousse", "charcoal"],
   };
 
-  const fabrics: Record<string, string[]> = {
-    "tomato-red":    ["Knit", "Leather", "Satin"],
-    "powder-pink":   ["Silk", "Fine knit", "Poplin"],
-    "butter-yellow": ["Cashmere", "Soft cotton"],
-    "mocha-mousse":  ["Suede", "Wool", "Leather"],
-    "lime-green":    ["Accessories", "Small accents"],
-  };
+//   const fabrics: Record<string, string[]> = {
+//     "tomato-red":    ["Knit", "Leather", "Satin"],
+//     "powder-pink":   ["Silk", "Fine knit", "Poplin"],
+//     "butter-yellow": ["Cashmere", "Soft cotton"],
+//     "mocha-mousse":  ["Suede", "Wool", "Leather"],
+//     "lime-green":    ["Accessories", "Small accents"],
+//   };
 
  
 function TrendCard({ color, setColor }: TrendCardProps) {
