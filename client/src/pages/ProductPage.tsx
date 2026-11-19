@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import type { Product } from "../types/Product";
-import { API_URL } from "../config";
+// import { API_URL } from "../config";
 
 const SIZE_ORDER = ["xs", "s", "m", "l", "xl"];
 
