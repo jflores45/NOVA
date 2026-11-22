@@ -7,7 +7,7 @@ import { useState } from "react";
 function CartPage() {
     const [carts, setCarts] = useState(initialCarts);
 
-    function increaseQuantity(id: string) {
+    function increaseQuantity(id: Number) {
       setCarts(
         carts.map((cart) =>
           cart.id === id
@@ -17,7 +17,7 @@ function CartPage() {
       );
     }
 
-    function decreaseQuantity(id: string) {
+    function decreaseQuantity(id: Number) {
       setCarts(
           carts.map((cart) =>
           cart.id === id

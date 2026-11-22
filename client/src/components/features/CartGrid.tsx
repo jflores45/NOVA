@@ -1,8 +1,8 @@
-import type { Cart } from "../../types/Cart";
+import type { CartLine } from "../../types/Cart";
 import CartItem from "./CartItem";
 
 type CartGridProps = {
-    carts: Cart[];
+    carts: CartLine[];
     onIncrease: (id: string) => void;
     onDecrease: (id: string) => void;
   };
