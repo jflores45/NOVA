@@ -6,38 +6,41 @@ type ProductCardProps = {
 };
 
 function ProductCard({ product }: ProductCardProps) {
-    return (
-      <Link to={`/product/${product.id}`} style={{ textDecoration: "none", color: "inherit" }}>
-        <div style={{ textAlign: "left", height: "400px" }}>
-          <div style={{ position: "relative" }}>
-            <img
-              src={product.images[0]?.url}
-              alt={product.name}
-              width="200"
-              height="300"
-              style={{ objectFit: "cover" }}
-            />
+  return (
+    <Link
+      to={`/product/${product.id}`}
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
+      <div style={{ textAlign: "left", height: "400px" }}>
+        <div style={{ position: "relative" }}>
+          <img
+            src={product.images[0]?.url}
+            alt={product.name}
+            width="200"
+            height="300"
+            style={{ objectFit: "cover" }}
+          />
 
-            <button
-              style={{
-                position: "absolute",
-                bottom: "20px",
-                right: "40px",
-                background: "none",
-                border: "none",
-              }}
-            >
-              <img src="/images/Add.png" alt="Add" style={{ height: "25px" }} />
-            </button>
-          </div>
-
-          <div style={{ padding: "0px", textAlign: "left", lineHeight: "0.8" }}>
-            <p>{product.name}</p>
-            <p>${product.price}</p>
-          </div>
+          <button
+            style={{
+              position: "absolute",
+              bottom: "20px",
+              right: "40px",
+              background: "none",
+              border: "none",
+            }}
+          >
+            <img src="/images/Add.png" alt="Add" style={{ height: "25px" }} />
+          </button>
         </div>
-      </Link>
-    );
+
+        <div style={{ padding: "0px", textAlign: "left", lineHeight: "0.8" }}>
+          <p>{product.name}</p>
+          <p>${product.price}</p>
+        </div>
+      </div>
+    </Link>
+  );
 }
 
 export default ProductCard;

@@ -8,7 +8,9 @@ const SIZE_ORDER = ["xs", "s", "m", "l", "xl"];
 function ProductPage() {
   const { id } = useParams();
   const [product, setProduct] = useState<Product | null>(null);
-  const [status, setStatus] = useState<"loading" | "ready" | "notfound" | "error">("loading");
+  const [status, setStatus] = useState<
+    "loading" | "ready" | "notfound" | "error"
+  >("loading");
   const [color, setColor] = useState<string | null>(null);
   const [size, setSize] = useState<string | null>(null);
   const [imageIndex, setImageIndex] = useState(0);
@@ -44,19 +46,27 @@ function ProductPage() {
   // sizes and colors come from the variants
   const colors = [...new Set(product.variants.map((v) => v.color))];
   const sizes = [...new Set(product.variants.map((v) => v.size))].sort(
-    (a, b) => SIZE_ORDER.indexOf(a) - SIZE_ORDER.indexOf(b)
+    (a, b) => SIZE_ORDER.indexOf(a) - SIZE_ORDER.indexOf(b),
   );
 
   // the exact variant the shopper picked (this is what the cart needs)
-  const selected = product.variants.find((v) => v.color === color && v.size === size);
+  const selected = product.variants.find(
+    (v) => v.color === color && v.size === size,
+  );
 
   const sizeAvailable = (s: string) =>
-    product.variants.some((v) => v.size === s && (!color || v.color === color) && v.stock > 0);
+    product.variants.some(
+      (v) => v.size === s && (!color || v.color === color) && v.stock > 0,
+    );
 
   return (
     <>
       <div className="Carosols">
-        <img className="Main" src={product.images[imageIndex]?.url} alt={product.name} />
+        <img
+          className="Main"
+          src={product.images[imageIndex]?.url}
+          alt={product.name}
+        />
         {product.images.map((img, i) => (
           <img
             key={img.id}
@@ -107,7 +117,11 @@ function ProductPage() {
           // send selected.id (the variantId) to your cart endpoint
         }}
       >
-        {!selected ? "SELECT COLOR & SIZE" : selected.stock === 0 ? "SOLD OUT" : "ADD TO BAG"}
+        {!selected
+          ? "SELECT COLOR & SIZE"
+          : selected.stock === 0
+            ? "SOLD OUT"
+            : "ADD TO BAG"}
       </button>
 
       <hr />

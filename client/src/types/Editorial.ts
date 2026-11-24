@@ -1,21 +1,21 @@
 import type { Product } from "./Product";
 
 export type EditorialFeatureImage = {
-    id: string;
-    imageUrl: string;
-    caption?: string;
-    sortOrder: number;
+  id: string;
+  imageUrl: string;
+  caption?: string;
+  sortOrder: number;
 };
-  
+
 export type EditorialFeature = {
-    id: string;
-    title: string;
-    description: string;
-    season: string;
-    category: string;
-    coverImage: string;
-    featured: boolean;
-    images: EditorialFeatureImage[];
+  id: string;
+  title: string;
+  description: string;
+  season: string;
+  category: string;
+  coverImage: string;
+  featured: boolean;
+  images: EditorialFeatureImage[];
 };
 
 export type EditorialLookProduct = {

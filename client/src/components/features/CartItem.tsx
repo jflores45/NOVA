@@ -24,7 +24,9 @@ function CartItem({ cart, onDecrease, onIncrease }: CartItemProps) {
       <div>
         <button onClick={onDecrease}>-</button>
         <span>{cart.quantity}</span>
-        <button onClick={onIncrease} disabled={cart.quantity >= variant.stock}>+</button>
+        <button onClick={onIncrease} disabled={cart.quantity >= variant.stock}>
+          +
+        </button>
       </div>
 
       <button>REMOVE</button>

@@ -20,10 +20,7 @@ function EditorialGrid({ collection }: EditorialGridProps) {
         }}
       >
         {collection.map((look) => (
-          <div
-            key={look.id}
-            style={{ textAlign: "left", height: "400px" }}
-          >
+          <div key={look.id} style={{ textAlign: "left", height: "400px" }}>
             <div style={{ position: "relative" }}>
               <img
                 src={look.coverImage}
@@ -46,11 +43,7 @@ function EditorialGrid({ collection }: EditorialGridProps) {
                   cursor: "pointer",
                 }}
               >
-                <img
-                  src="/images/More.png"
-                  alt=""
-                  style={{ height: "30px" }}
-                />
+                <img src="/images/More.png" alt="" style={{ height: "30px" }} />
               </button>
             </div>
           </div>

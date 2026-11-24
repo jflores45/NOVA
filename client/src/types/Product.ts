@@ -5,6 +5,13 @@ export type ProductImage = {
   productId: number;
 };
 
+export type ProductVariant = {
+  id: number;
+  size: string;
+  color: string;
+  stock: number;
+};
+
 export type Product = {
   id: number;
   name: string;
@@ -14,4 +21,5 @@ export type Product = {
   category: string;
   featured: boolean;
   images: ProductImage[];
+  variants: ProductVariant[];
 };

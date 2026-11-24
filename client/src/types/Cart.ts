@@ -1,12 +1,16 @@
-export type Cart = {
-    id: string;
-    item: string;
-    name: string;
-    price: number;
-    quantity: number;
-  
-    images: string[];
-    colors: string[];
-    sizes: string[];
-
+export type CartLine = {
+  id: number;
+  quantity: number;
+  variant: {
+    id: number;
+    size: string;
+    color: string;
+    stock: number;
+    product: {
+      id: number;
+      name: string;
+      price: string | number;
+      images: { url: string }[];
+    };
   };
+};

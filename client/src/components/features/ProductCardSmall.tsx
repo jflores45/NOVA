@@ -7,32 +7,31 @@ type ProductCardProps = {
 
 function ProductCardSmall({ product }: ProductCardProps) {
   return (
-    <Link to={`/product/${product.id}`} style={{ textDecoration: "none", color: "inherit" }} >
+    <Link
+      to={`/product/${product.id}`}
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
       <div style={{ position: "relative", width: "300px", height: "350px" }}>
-          <img
-            src={product.images[0]?.url}
-            alt={product.name}
-            width="300"
-            height="350"
-            style={{ objectFit: "cover" }}
-          />
+        <img
+          src={product.images[0]?.url}
+          alt={product.name}
+          width="300"
+          height="350"
+          style={{ objectFit: "cover" }}
+        />
 
-          <button
-            style={{
-              position: "absolute",
-              bottom: "10px",
-              right: "10px",
-              background: "none",
-              border: "none",
-              padding: "8px",
-              cursor: "pointer",
-            }}
-          >
-            <img
-              src="/images/Add.png"
-              alt="Add"
-              style={{ height: "30px" }}
-            />
+        <button
+          style={{
+            position: "absolute",
+            bottom: "10px",
+            right: "10px",
+            background: "none",
+            border: "none",
+            padding: "8px",
+            cursor: "pointer",
+          }}
+        >
+          <img src="/images/Add.png" alt="Add" style={{ height: "30px" }} />
         </button>
       </div>
 

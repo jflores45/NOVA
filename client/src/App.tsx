@@ -1,13 +1,13 @@
-import MainPage from './pages/MainPage';
+import MainPage from "./pages/MainPage";
 import CartPage from "./pages/CartPage";
 import LikePage from "./pages/LikePage";
 import UserPage from "./pages/UserPage";
-import WomenPage from './pages/WomenPage';
-import MenPage from './pages/MenPage';
+import WomenPage from "./pages/WomenPage";
+import MenPage from "./pages/MenPage";
 import ProductPage from "./pages/ProductPage";
 import ItemPage from "./pages/ItemPage";
-import NavBar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
+import NavBar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 
 // import './App.css'
 import { Routes, Route } from "react-router-dom";
@@ -15,16 +15,16 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <NavBar/>
+      <NavBar />
       <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/user" element={<UserPage/>} />
-          <Route path="/women" element={<WomenPage />} />
-          <Route path="/men" element={<MenPage />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/likes" element={<LikePage />} />
-          <Route path="/product" element={<ProductPage />} />
-          <Route path="/product/:id" element={<ItemPage />} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/user" element={<UserPage />} />
+        <Route path="/women" element={<WomenPage />} />
+        <Route path="/men" element={<MenPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/likes" element={<LikePage />} />
+        <Route path="/product" element={<ProductPage />} />
+        <Route path="/product/:id" element={<ItemPage />} />
       </Routes>
       <Footer />
     </>

@@ -25,15 +25,36 @@ function Carousels({ slides, interval = 3000 }: CarouselProps) {
       </div>
 
       {/* progress bars */}
-      <div style={{ display: "flex", gap: "8px", width: "500px", margin: "0 auto" }}>
+      <div
+        style={{
+          display: "flex",
+          gap: "8px",
+          width: "500px",
+          margin: "0 auto",
+        }}
+      >
         {slides.map((s, i) => (
           <button
             key={i}
             onClick={() => setCurrentIndex(i)}
             aria-label={`Go to ${s.designer} ${s.season}`}
-            style={{ flex: 1, padding: "12px 0", background: "none", border: "none", cursor: "pointer" }}
+            style={{
+              flex: 1,
+              padding: "12px 0",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+            }}
           >
-            <span style={{ display: "block", height: "3px", background: "grey", borderRadius: "2px", overflow: "hidden" }}>
+            <span
+              style={{
+                display: "block",
+                height: "3px",
+                background: "grey",
+                borderRadius: "2px",
+                overflow: "hidden",
+              }}
+            >
               <span
                 onAnimationEnd={next}
                 style={{
@@ -42,7 +63,10 @@ function Carousels({ slides, interval = 3000 }: CarouselProps) {
                   background: "black",
                   transformOrigin: "left",
                   transform: i < currentIndex ? "scaleX(1)" : "scaleX(0)",
-                  animation: i === currentIndex ? `fill ${interval}ms linear forwards` : "none",
+                  animation:
+                    i === currentIndex
+                      ? `fill ${interval}ms linear forwards`
+                      : "none",
                 }}
               />
             </span>
