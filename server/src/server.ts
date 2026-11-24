@@ -12,7 +12,15 @@ import wishlistRoutes from "./routes/wishlistRoutes";
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://nova-6en5.onrender.com"
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // app.use("/api/auth", authRoutes);
