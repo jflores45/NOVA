@@ -16,9 +16,9 @@ function ProductPage() {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
-    setStatus("loading");
+    // setStatus("loading");
     setColor(null);
-    setSize(null);
+    // setSize(null);
     setImageIndex(0);
 
     fetch(`${import.meta.env.VITE_API_URL}/api/products?${id}`)
