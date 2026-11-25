@@ -21,6 +21,13 @@ app.use(cors({
 
 app.use(express.json());
 
+app.get("/api/health", (req, res) => {
+  res.json({
+    status: "ok",
+    message: "NOVA backend is running"
+  });
+});
+
 app.use("/api/user", userRoutes);
 app.use("/api/editorial", editorialRoutes);
 app.use("/api/trends", trendRoutes);
